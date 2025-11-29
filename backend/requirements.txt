@@ -1,0 +1,22 @@
+# Web Scraping Project Dependencies
+
+# Core web scraping libraries
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+playwright>=1.40.0
+
+# Data processing and storage
+mysql-connector-python>=8.2.0
+# Note: sqlite3 is part of Python standard library (no separate install needed)
+
+# Concurrency support
+# (concurrent.futures is part of Python standard library)
+
+# Additional parsing utilities
+lxml>=4.9.0
+
+# Optional: For enhanced HTTP sessions and retries
+urllib3>=2.0.0
+
+# Optional: For CSV handling improvements
+pandas>=2.0.0
