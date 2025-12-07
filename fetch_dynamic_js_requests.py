@@ -1,12 +1,12 @@
 import json
 from playwright.sync_api import sync_playwright, TimeoutError
 
-url = "https://xhamster1.desi/videos/odia-hot-wife-sona-body-massage-after-sex-xhESzZC"
+url = "https://xhamster1.desi/videos/indian-step-sister-in-law-fuking-jija-with-hindi-audio-xhympQ3?utm_campaign=embed&utm_content=23766589&utm_medium=referral&utm_source=localhost&utm_term=full-video-button"
 
 # Your authenticated proxy
 PROXY = {
-    "ip": "31.59.20.176",
-    "port": "6754",
+    "ip": "23.95.150.145",
+    "port": "6114",
     "user": "rhvchaso",
     "pass": "t85zlhdvv9b5"
 }
@@ -46,7 +46,7 @@ def fetch_videos():
         print(f"🧠 Proxy IP detected: {proxy_ip}\n")
 
         print(f"🌐 Visiting: {url}")
-        page.goto(url, wait_until="networkidle")
+        page.goto(url, wait_until="networkidle", timeout=120000)
 
         try:
             # page.wait_for_selector(".thumb.thumb_rel.item a", timeout=30000)
@@ -78,10 +78,11 @@ def fetch_videos():
             title = link.get_attribute("title") or link.get_attribute("aria-label") or link.text_content()
             title = title.strip() if title else None
 
-            img_el = card.query_selector("img")
+            img_el = card.query_selector("img.thumb-image-container__image")
             thumb = None
+
             if img_el:
-                thumb = img_el.get_attribute("data-webp") or img_el.get_attribute("src")
+                thumb = img_el.get_attribute("src")
 
             videos.append({
                 "title": title,

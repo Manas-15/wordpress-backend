@@ -27,29 +27,16 @@ cd <your-repo-folder>
 2. Create a virtual environment (recommended)
 python -m venv .venv
 
-3. Activate the virtual environment
-PowerShell (Windows)
-.venv\Scripts\Activate.ps1
-
 Linux
 source .venv/bin/activate
 
-Command Prompt (Windows)
-.venv\Scripts\activate
-
-
 If you get an execution policy error, run:
-
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-
-Command Prompt (Windows)
-.venv\Scripts\activate
 
 4. Install required packages
 pip install -r requirements.txt
 
 Run the main script:
-
 python fetch_requests.py
 
 To recreate the environment later:
@@ -74,3 +61,11 @@ Using File Explorer, go to:
 D:/xampp/htdocs/myvideosite/wp-content/plugins/
 Copy the updraftplus plugin folder into this plugins directory.
 Go to your WordPress Dashboard → Plugins → Installed Plugins → you should now see “UpdraftPlus” → click Activate.
+
+
+
+
+Change Home and Site url
+----------------------------
+http://localhost/wordpress-frontend
+http://localhost:8080/myvideosite

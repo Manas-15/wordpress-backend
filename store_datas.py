@@ -1,3 +1,5 @@
+import pymysql
+pymysql.install_as_MySQLdb()
 import MySQLdb
 from bs4 import BeautifulSoup
 import requests
